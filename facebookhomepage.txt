@@ -1,0 +1,37 @@
+public class NaaptolHomePage {
+	
+	@FindBy (xpath = "//a[@id='login-panel-link']")private WebElement register;
+	@FindBy (xpath = "//a[text()='Track Order']")private WebElement trackorder;
+	@FindBy (xpath = "//span[@class='arrowNav']")private WebElement shoppingcategories;
+	@FindBy (xpath = "//input[@class='srchInput header_search_text ui-autocomplete-input']")private WebElement searchtab;
+	@FindBy (xpath = "(//a[@href='javascript:autoSuggestion.headerSearch()'])[2]")private WebElement search;
+@FindBy (xpath = "//span[@id='header_search_shopping_cart_count']")private WebElement addtocart;
+
+	public void FaceBookLoginPage(WebDriver driver) {
+		PageFactory.initElements(driver,this );
+	}
+	
+	public void clickonregister() {
+		register.click(); ;
+	}
+	
+	public void clickontrackorder() {
+		trackorder.click(); ;
+	}
+public void clickOnshoppingcategories() {
+		shoppingcategories.click();
+	}
+	
+	public void enterinsearchtab(String value) {
+		searchtab.sendKeys(value);;
+	}
+	
+	public void clickOnsearch() {
+		search.click();
+	}
+	
+	public void clickOnaddtocart() {
+		addtocart.click();
+	}
+
+}
